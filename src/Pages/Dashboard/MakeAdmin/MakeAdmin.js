@@ -8,6 +8,21 @@ const MakeAdmin = () => {
     setEmail(e.target.value);
   };
   const handleAdminSubmit = (e) => {
+    const user = { email };
+    fetch("https://shielded-meadow-42528.herokuapp.com/users/admin", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          setSuccess(true);
+        }
+      });
     e.preventDefault();
   };
   return (

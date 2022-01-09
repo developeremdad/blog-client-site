@@ -6,13 +6,13 @@ const FeaturedPost = () => {
     const [posts, setPosts] = useState([]);
     console.log(posts);
     useEffect(() =>{
-        fetch('https://calm-eyrie-50135.herokuapp.com/blog')
+        fetch('https://shielded-meadow-42528.herokuapp.com/blog')
         .then(res => res.json())
         .then(data => setPosts(data))
 
     }, []);
     return (
-        <div>
+        <div className="mb-5">
             
             <Carousel fade >
                 <Carousel.Item>

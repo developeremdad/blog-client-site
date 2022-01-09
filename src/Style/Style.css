@@ -263,3 +263,56 @@ select {
   color: #ffc107;
   border-radius: 15px;
 }
+
+/*------------------- add Blog style --------------------- */
+
+.add-blog {
+  padding-bottom: 50px;
+}
+
+.add-blog form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-blog form input,
+textarea {
+  width: 50%;
+  margin-bottom: 13px;
+  border: 1px solid rgb(196, 194, 194);
+  border-radius: 4px;
+}
+.btn-design-add {
+  background: linear-gradient(to top, #800080, #ffc0cb);
+}
+select {
+  width: 50%;
+  margin-bottom: 8px;
+  border: 1px solid rgb(196, 194, 194);
+  border-radius: 4px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.add-admin form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-admin form input {
+  width: 50%;
+  margin-bottom: 13px;
+  border: 1px solid rgb(196, 194, 194);
+  border-radius: 4px;
+}
+@media only screen and (max-width: 600px) {
+  .add-admin form input {
+    width: 100%;
+    margin-bottom: 13px;
+    border: 1px solid rgb(196, 194, 194);
+    border-radius: 4px;
+  }
+}

@@ -19,14 +19,14 @@ const BlogDetails = () => {
 
   // get a single blog
   useEffect(() => {
-    fetch(`http://localhost:5000/blogDetails/${postId}`)
+    fetch(`https://shielded-meadow-42528.herokuapp.com/blogDetails/${postId}`)
       .then((res) => res.json())
       .then((data) => setPost(data));
   }, [postId]);
 
   // get all comments
   useEffect(() => {
-    fetch(`http://localhost:5000/comments`)
+    fetch(`https://shielded-meadow-42528.herokuapp.com/comments`)
       .then((res) => res.json())
       .then((data) => setComments(data));
   }, [postId, isAddComment]);
@@ -52,7 +52,7 @@ const BlogDetails = () => {
 
     setIsAddComment(false);
     axios
-      .post("http://localhost:5000/comments", submitData)
+      .post("https://shielded-meadow-42528.herokuapp.com/comments", submitData)
       .then(function (response) {
         if (response.data.insertedId) {
           setIsAddComment(true);
